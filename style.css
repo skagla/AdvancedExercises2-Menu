@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+.section {
+  padding-top: 20px;
+  width: 90vw;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.menu-flex {
+  padding: 20px;
+  max-width: 90vw;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: gold;
+}
+
+.card {
+  /* width: 170px; */
+  height: 200px;
+  flex: 1;
+  min-width: 170px;
+  max-width: 340px;
+  /* border: 3px solid rgba(100, 148, 237, 0.482); */
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  transition: 300ms;
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+.menu-grid {
+  padding: 20px;
+  max-width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 200px; */
+  gap: 20px;
+  justify-content: center;
+  background-color: gold;
+}
+.card-grid {
+  /* width: 170px; */
+  /* height: 200px; */
+
+  /* min-width: 170px;
+  max-width: 340px; */
+  height: 200px;
+  /* border: 3px solid rgba(100, 148, 237, 0.482); */
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  transition: 300ms;
+}
+.card-grid:hover {
+  scale: 1.05;
+}
+.picture {
+  width: 100%;
+  height: 100%;
+  background-color: coral;
+  background-image: url("https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.name {
+  margin: 2px;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.price {
+  margin: 2px;
+  font-size: 1rem;
+}
+
+.span-2col {
+  grid-column: span 2;
+}
+.span-2row {
+  grid-row: span 2;
+}
+.importantDish {
+  grid-column: span 2;
+}
+.veryImportantDish {
+  /* height: 420px; */
+  height: 100%;
+  min-height: 400px;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* tablet */
+@media (width < 1023px) {
+  .menu-grid {
+    padding: 20px;
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 200px; */
+    gap: 20px;
+    justify-content: center;
+    background-color: gold;
+  }
+}
+
+/* smartphone */
+@media (width < 768px) {
+  .menu-grid {
+    padding: 20px;
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 200px; */
+    gap: 20px;
+    justify-content: center;
+    background-color: gold;
+  }
+  .importantDish {
+    grid-column: span 1;
+  }
+  .veryImportantDish {
+    /* height: 420px; */
+    height: 100%;
+    min-height: 400px;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .name {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .price {
+    font-size: 0.8rem;
+  }
+}
